@@ -5,7 +5,9 @@ FinalProj::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   root :to => 'sessions#new'
   resources :projects
-  resources :users
-  resources :sessions
+  resources :users do
+    resources :userprojects
+  end
+  resources :sessions, only: [:new, :create, :destroy]
 
 end
