@@ -34,4 +34,15 @@ FinalProj::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #Added this for paperclip
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "wdi-paperclip",
+      :access_key_id => "AKIAIGS4WPWV3S4IPTMQ",
+      :secret_access_key => "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",
+      :s3_host_name => 's3-us-west-1.amazonaws.com'
+    }
+  }
 end

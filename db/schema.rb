@@ -11,15 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131210035037) do
+ActiveRecord::Schema.define(:version => 20131210073533) do
+
+  create_table "project_users", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.datetime "dueDate"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "projtitle"
     t.string   "author"
     t.text     "notes"
-    t.datetime "duedate"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "patternFile_file_name"
+    t.string   "patternFile_content_type"
+    t.integer  "patternFile_file_size"
+    t.datetime "patternFile_updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -27,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20131210035037) do
     t.string   "password"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "email"
   end
 
 end
