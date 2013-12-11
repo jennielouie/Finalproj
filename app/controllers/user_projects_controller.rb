@@ -8,14 +8,14 @@ class UserProjectsController < ApplicationController
     @userproj = UserProject.new
   end
 
-  def create
-    @userproj = UserProject.create(params[:user_project])
-    redirect_to projects_path
-  end
+  # def create
+  #   @userproj = UserProject.create(params[:userproject])
+  #   redirect_to projects_path
+  # end
 
-  def show
-    @userproj = UserProject.find(params[:id])
-  end
+  # def show
+  #   @userproj = UserProject.find(params[:id])
+  # end
 
   def edit
   end

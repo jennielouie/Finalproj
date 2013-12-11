@@ -10,7 +10,7 @@
 
 <div id = "user_nav">
   <% if current_user %>
-  Hi <%= current_user.name %>, you're logged in now.</br>
+  Hi <%= current_user.name %>, you are currently logged in.</br>
     <%= link_to "Log out", session_path("current"), method: "delete" %>
   <% else %>
     <%= link_to "Sign up", sign_up_path %>
