@@ -1,21 +1,21 @@
 class UserProjectsController < ApplicationController
 
   def index
-    @userproj = UserProject.all
+    @user_proj = UserProject.all
   end
 
   def new
-    @userproj = UserProject.new
+    @user_proj = UserProject.new
   end
 
-  # def create
-  #   @userproj = UserProject.create(params[:userproject])
-  #   redirect_to projects_path
-  # end
+  def create
+    newuserproj = UserProject.create(params[:user_project])
+    redirect_to user_user_projects_path(current_user)
+  end
 
-  # def show
-  #   @userproj = UserProject.find(params[:id])
-  # end
+  def show
+    @user_proj = UserProject.find(params[:id])
+  end
 
   def edit
   end

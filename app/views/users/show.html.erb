@@ -1,1 +1,6 @@
-<h1> You've reached the users show page </h1>
+<h1>User Personal Show Page</h1>
+
+<p>Current user is <%=current_user.name %><p>
+  <% @user_proj.each do |f| %>
+  <%= f.projtitle %> </br>
+  <% end %>

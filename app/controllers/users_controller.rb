@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def index
+    @user = current_user
   end
 
   def new
@@ -18,7 +19,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
+    @user_proj = UserProject.where(user_id: current_user.id)
   end
 
 end
