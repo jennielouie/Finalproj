@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<div id = "user_nav">
+  <% if current_user %>
+  Hi <%= current_user.name %>, you're logged in now.</br>
+    <%= link_to "Log out", session_path("current"), method: "delete" %>
+  <% else %>
+    <%= link_to "Sign up", sign_up_path %>
+    <%= link_to "Log in", log_in_path %>
+  <% end %>
+</div>
+
+<%= flash[:notice] %>
+<%= flash[:alert] %>
+
 <%= yield %>
 
 </body>
