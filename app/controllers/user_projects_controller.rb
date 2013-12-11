@@ -1,7 +1,7 @@
 class UserProjectsController < ApplicationController
 
   def index
-    @userprojs = UserProject.all
+    @userproj = UserProject.all
   end
 
   def new

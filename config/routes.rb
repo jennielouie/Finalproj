@@ -6,7 +6,7 @@ FinalProj::Application.routes.draw do
   root :to => 'sessions#new'
   resources :projects
   resources :users do
-    resources :userprojects
+    resources :user_projects
   end
   resources :sessions, only: [:new, :create, :destroy]
 
