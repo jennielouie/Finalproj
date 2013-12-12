@@ -10,11 +10,10 @@ class UserProjectsController < ApplicationController
 
   def create
     newuserproj = UserProject.create(params[:user_project])
-    redirect_to user_user_projects_path(current_user)
+    redirect_to user_path(current_user)
   end
 
   def show
-    @user_proj = UserProject.find(params[:id])
   end
 
   def edit

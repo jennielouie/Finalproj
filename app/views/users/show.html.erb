@@ -1,7 +1,10 @@
 <h1>User Personal Show Page</h1>
 <div class ="signupbox">
-<p>Current user is <%=current_user.name %><p>
-  <% @user_proj.each do |f| %>
-  <%= f.project_id %> </br>
+<p>Here's a list of your projects:<p>
+<ol>
+  <% @user_proj_list.each do |f| %>
+<li><%= f.projtitle %></li> </br>
   <% end %>
+
+<%= link_to "Create a new project", new_project_path %></br>
 </div>

@@ -6,6 +6,9 @@ User.create({name: 'Cece', email: 'c@c.com', password: '111111'})
 Project.create({projtitle:'first project', author:'first author', notes:'first notes'})
 Project.create({projtitle:'second project', author:'second author', notes:'second notes'})
 Project.create({projtitle:'third project', author:'third author', notes:'third notes'})
+Project.create({projtitle:'fourth project', author:'fourth author', notes:'fourth notes'})
+
+
 UserProject.create({user_id: '1', project_id: '1'})
 UserProject.create({user_id: '2', project_id: '2'})
 UserProject.create({user_id: '3', project_id: '3'})

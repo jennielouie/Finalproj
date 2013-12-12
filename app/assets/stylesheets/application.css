@@ -53,9 +53,19 @@ input[type='submit'] {
   width: 55%;
   padding: 1%;
   border-radius: 10px;
-
 }
 
+/*.titlediv {
+  background-color: ivory;
+  opacity: 0.7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #999999;
+  margin: 0.5em;
+  width: 80%;
+  padding: 1%;
+  border-radius: 10px;
+}*/
 .field #email, #password {
   font-family: 'Raleway', sans-serif;
   border-width: 1px;

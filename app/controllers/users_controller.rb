@@ -20,9 +20,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @user_proj = UserProject.where(user_id: current_user.id)
-    # STILL NEED TO FIGURE OUT HOW TO GET PROJECT NAMES ASSOCIATED WITH USER_PROJECTS, BELOW DOES NOT WORK.  I THOUGHT COULD DO @USER_PROJECT.PROJTITLE?
-    # @project = Project.find_all_by_id(@user_proj.project_id)
+    @user_proj_list = User.find(params[:id]).projects
   end
 
 end
