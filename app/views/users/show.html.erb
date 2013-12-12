@@ -1,9 +1,9 @@
-<h1>User Personal Show Page</h1>
+<h1>Your Projects</h1>
 <div class ="signupbox">
 <p>Here's a list of your projects:<p>
 <ol>
   <% @user_proj_list.each do |f| %>
-<li><%= f.projtitle %></li> </br>
+<li><%= link_to "#{f.projtitle}", user_user_project_path(UserProject.where(:user_id => @user.id, :project_id => f.id).first.id) %></li> </br>
   <% end %>
 
 <%= link_to "Create a new project", new_project_path %></br>
