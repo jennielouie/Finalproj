@@ -1,6 +1,7 @@
 <h1>This is the User_Projects Index Page</h1>
-
+<div class ="signupbox">
 <p>Current user is <%=current_user.name %><p>
   <% @user_proj.each do |f| %>
   <%= f.project_id %> </br>
   <% end %>
+</div>

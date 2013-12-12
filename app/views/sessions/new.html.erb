@@ -1,14 +1,21 @@
-<h1>Log in to CrochetPA</h1>
 
+<div class = "titlediv">
+  <h1>Welcome to CrochetPA</h1>
+  <h4> Your Personal Assistant for Crochet Projects </h4>
+</div>
+
+<div class ="signupbox">
+<h3>Please log in</h3>
 <%= form_tag sessions_path do %>
   <div class = "field">
-    <%= label_tag :email %>
+    <%= label_tag :email %></br>
     <%= text_field_tag :email, params[:email] %>
   </div>
 
   <div class = "field">
-    <%= label_tag :password %>
+    <%= label_tag :password %></br>
     <%= password_field_tag :password %>
   </div>
-  <div class = "actions"><%= submit_tag "Log in" %></div>
+<%= submit_tag "SUBMIT", :class =>'button_form' %></br>
 <% end %>
+</div>

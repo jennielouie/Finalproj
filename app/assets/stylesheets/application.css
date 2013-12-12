@@ -11,3 +11,68 @@
  *= require_self
  *= require_tree .
  */
+ body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  background-image: url('crochet1.jpg');
+  background-size:100%;
+  background-repeat:no-repeat;
+  background-position: center;
+  color: black;
+ }
+
+ h1 {
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: lightseagreen;
+ }
+
+h4 {
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: darkturquoise;
+ }
+
+
+input[type='submit'] {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  width: 45%;
+  height: 4%;
+}
+
+.signupbox {
+  background-color: ivory;
+  opacity: 0.7;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #999999;
+  margin: 0.5em;
+  width: 55%;
+  padding: 1%;
+  border-radius: 10px;
+
+}
+
+.field #email, #password {
+  font-family: 'Raleway', sans-serif;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #999999;
+  border-radius: 5px;
+  margin: 0.5em;
+  font-size: 24px;
+  color: #333333;
+  width: 90%;
+  height: 40px;
+}
+
+#user_nav {
+background-color: ivory;
+text-align: center;
+width: 10%;
+float: right;
+border-radius: 5px;
+}

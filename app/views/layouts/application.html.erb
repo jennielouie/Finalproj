@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Bitter|Raleway' rel='stylesheet' type='text/css'>
   <title>CrochetPA</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -8,18 +9,20 @@
 </head>
 <body>
 
-<div id = "user_nav">
+<nav id = "user_nav">
   <% if current_user %>
   Hi <%= current_user.name %>, you are currently logged in.</br>
     <%= link_to "Log out", session_path("current"), method: "delete" %>
   <% else %>
-    <%= link_to "Sign up", sign_up_path %>
+    <%= link_to "Sign up", sign_up_path %></br>
     <%= link_to "Log in", log_in_path %>
   <% end %>
-</div>
+</nav>
 
-<%= flash[:notice] %>
-<%= flash[:alert] %>
+<div class = flash>
+  <%= flash[:notice] %>
+  <%= flash[:alert] %>
+</div>
 
 <%= yield %>
 
