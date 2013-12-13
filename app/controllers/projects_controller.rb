@@ -6,6 +6,7 @@ end
 
 def new
   @project = Project.new
+  @user_project = UserProject.new
 end
 
 def create

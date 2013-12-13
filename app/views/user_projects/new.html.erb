@@ -1,5 +1,5 @@
 <h1>Add a New Project to your Dashboard</h1>
-<%= link_to "Return to all Your Projects", user_user_projects_path(current_user.id) %>
+
 <h4>Here is a list of existing projects</h4>
 <form method="post" action ="/users/<%= current_user.id %>/user_projects">
   <input type = "hidden" name= "user_id" value = "<#%= current_user.id %>">
@@ -10,4 +10,5 @@ To be completed by: <input type="date" name="dueDate"></br>
 <input type="submit">
 </form>
 
-<%= link_to "Create a new project", new_project_path %></br>
+<%= link_to "Or create a new project", new_project_path %></br>
+<%= link_to "Return to all Your Projects", user_user_projects_path(current_user.id) %>
