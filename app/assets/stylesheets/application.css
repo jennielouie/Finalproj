@@ -14,25 +14,25 @@
  body {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
-  background-image: url('crochet1.jpg');
+  background-image: url('crochet1fade.jpg');
   background-size:100%;
   background-repeat:no-repeat;
   background-position: center;
-  color: black;
+  color: initial;
  }
 
  h1 {
   font-family: 'Bitter', serif;
   font-weight: 700;
   font-size: 60px;
-  color: lightseagreen;
+  color: initial;
  }
 
 h4 {
   font-family: 'Bitter', serif;
   font-weight: 700;
   font-size: 36px;
-  color: darkturquoise;
+  color: initial;
  }
 
 

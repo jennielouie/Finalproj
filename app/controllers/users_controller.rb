@@ -18,9 +18,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = current_user
-    @user_proj_list = User.find(params[:id]).projects
-  end
+  # def show
+  #   @user = current_user
+  #   @user_proj_list = User.find(params[:id]).projects
+  # end
 
 end

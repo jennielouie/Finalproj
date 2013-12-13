@@ -1,7 +1,12 @@
-<h1>This is the User_Projects Index Page</h1>
+<h1>Your Projects from User_user_project index page</h1>
 <div class ="signupbox">
-<p>Current user is <%=current_user.name %><p>
+<p>Here's a list of your projects:<p>
+<ol>
   <% @user_proj_list.each do |f| %>
-  <%= f.projtitle %> </br>
+<li><%= link_to "#{f.projtitle}", user_user_project_path(current_user.id, UserProject.where(:project_id => f.id,:user_id => current_user.id).first.id) %></li> </br>
+
   <% end %>
+
+<%= link_to "Create a new project", new_project_path %></br>
+<%= link_to "Add a project", new_user_user_project_path(current_user) %></br>
 </div>

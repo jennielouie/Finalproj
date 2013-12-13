@@ -1,0 +1,13 @@
+<h1>Add a New Project to your Dashboard</h1>
+
+<h4>Here is a list of existing projects</h4>
+<form method="post" action ="/users/<%= current_user.id %>/user_projects">
+  <input type = "hidden" name= "user_id" value = "<#%= current_user.id %>">
+<% @project.each do |f| %>
+<input type="radio" name="project_id" value="<#%= f.id %>"><%= f.projtitle %></br>
+<%end %>
+To be completed by: <input type="date" name="dueDate"></br>
+<input type="submit">
+</form>
+
+<%= link_to "Create a new project", new_project_path %></br>
