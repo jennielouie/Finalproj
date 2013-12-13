@@ -15,14 +15,11 @@ ActiveRecord::Schema.define(:version => 20131211193036) do
 
   create_table "projects", :force => true do |t|
     t.string   "projtitle"
+    t.text     "description"
     t.string   "author"
-    t.text     "notes"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
-    t.string   "patternFile_file_name"
-    t.string   "patternFile_content_type"
-    t.integer  "patternFile_file_size"
-    t.datetime "patternFile_updated_at"
+    t.text     "pattern"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "user_projects", :force => true do |t|
@@ -35,11 +32,10 @@ ActiveRecord::Schema.define(:version => 20131211193036) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "password"
+    t.string   "password_digest"
+    t.string   "email"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "email"
-    t.string   "password_digest"
   end
 
 end
