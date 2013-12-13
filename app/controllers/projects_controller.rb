@@ -11,11 +11,13 @@ end
 
 def create
   new_project = Project.create(params[:project])
+  new_project.parsePattern
   redirect_to project_path(new_project)
 end
 
 def show
   @project = Project.find(params[:id])
+  @instructions = Instruction.find_all_by_project_id(params[:id])
 end
 
 end

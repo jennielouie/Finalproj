@@ -12,7 +12,9 @@
   <strong>Project Description: </strong>
   <%= @project.description %></br>
 
-  <strong>Pattern Text: </strong>
-  <%= @project.pattern %>
+<% @instructions.each do |f| %>
+<strong>Instruction # <%=f.ordinal%>:</strong></br>
+  <%= f.instext %></br>
+  <% end %>
 </p>
 

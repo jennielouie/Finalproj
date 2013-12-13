@@ -17,6 +17,7 @@ class UserProjectsController < ApplicationController
   def show
     @user_proj = UserProject.find(params[:id])
     @project = Project.find(@user_proj.project_id)
+    @instructions= Instruction.find_all_by_project_id(@user_proj.project_id)
   end
 
   def edit
