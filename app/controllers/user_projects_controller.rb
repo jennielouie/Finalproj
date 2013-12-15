@@ -11,13 +11,17 @@ class UserProjectsController < ApplicationController
 
   def create
     @user_project = UserProject.create(params[:user_project])
-    redirect_to user_path(current_user)
+    redirect_to user_user_projects_path(current_user.id)
   end
 
   def show
     @user_proj = UserProject.find(params[:id])
     @project = Project.find(@user_proj.project_id)
     @instructions= Instruction.find_all_by_project_id(@user_proj.project_id)
+    respond_to do |format|
+      format.html
+      format.json { render :json => @instructions }
+    end
   end
 
   def edit

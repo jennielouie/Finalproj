@@ -3,8 +3,8 @@
 
 <h3><%= @project.projtitle %></h3>
 
-<div class = "currentInst">
-  <p>Current Instruction: #<%= @instructions.first.ordinal %> of <%= @instructions.last.ordinal %></p>
+<div class = "patternboxHeader">
+  <p>Current Instruction: #<span id="thisInst"><%= @instructions[0].ordinal %></span> of <span id="totalInsts"><%= @instructions.last.ordinal %></span></p>
 </div>
 
 
@@ -12,8 +12,8 @@
   <h3>Repeated Row/Round Counter</h3>
   <h5>Total # of Repeated Rows/Rounds: </h5><input id="repeatstotal" type="text" placeholder="Total repeats" /></br>
   <input id="repeatstodo" type="text" placeholder="Left to do" />
-  <button class="button">+</button>
-  <button class="button">-</button>
+  <button class="button" id="upcount">+</button>
+  <button class="button" id="downcount">-</button>
   <input id="repeatsdone" type="text" placeholder="Completed" />
 </div>
 
@@ -34,6 +34,6 @@
 </div>
 
 <div class = "patternbuttons">
-  <button class="button">+</button>
-  <button class="button">-</button>
+  <button class="button" id="nextInst">+</button>
+  <button class="button" id="prevInst">-</button>
 </div>

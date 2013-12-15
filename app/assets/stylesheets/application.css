@@ -52,6 +52,18 @@ input[type='submit'] {
   height: 4%;
 }
 
+
+.button {
+  padding      : 5px;
+  font         : bold ;
+  font-family: 'Raleway', sans-serif;
+  font-size: 60px;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+  cursor  : pointer;
+}
+
 .counter {
   float: right;
 }

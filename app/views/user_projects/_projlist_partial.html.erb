@@ -1,0 +1,6 @@
+<div>
+<%= @project.each do |p|%>
+  <%= radio_button_tag :project_id, "#{p.projtitle}"%>
+  <% end %>
+</div>
+
