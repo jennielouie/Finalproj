@@ -182,3 +182,113 @@ UserProject.create({user_id: '1', project_id: '4'})
 UserProject.create({user_id: '2', project_id: '3'})
 UserProject.create({user_id: '3', project_id: '1'})
 
+Instruction.create({project_id: 1, ordinal: 1, instext: "Rnd 6: Ch 1 (counts as 1st sc), sc in next st, Add Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 1, ordinal: 2, instext: "Rnd 7: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 1, ordinal: 3, instext: "Rnd 5: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+
+Instruction.create({project_id: 2, ordinal: 1, instext: "Rnd 6: Ch 1 (counts as 1st sc), sc in next st, Add Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 2, ordinal: 2, instext: "Rnd 7: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 2, ordinal: 3, instext: "Rnd 5: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+
+Instruction.create({project_id: 3, ordinal: 1, instext: "Rnd 6: Ch 1 (counts as 1st sc), sc in next st, Add Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 3, ordinal: 2, instext: "Rnd 7: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 3, ordinal: 3, instext: "Rnd 5: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 4, ordinal: 1, instext: "Rnd 6: Ch 1 (counts as 1st sc), sc in next st, Add Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 4, ordinal: 2, instext: "Rnd 7: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})
+Instruction.create({project_id: 4, ordinal: 3, instext: "Rnd 5: Ch 1 (counts as 1st sc), sc in next st, 3 scAdd Stitches for Sides
+Set sleeve aside, but do not fasten off.
+With new ball of yarn, Fsc 36 (51). Do not remove last loop
+from hook. Cut yarn leaving a long tail for weaving in later.
+Pick up sleeve and yarn attached to sleeve.
+Row 1: Working across last row of sleeve sts, sc2tog, 4 sc
+in next ch-4 space, *sc in next sc, 4 sc in next ch-4 space;
+repeat from * to last 2 sc, sc2tog, Fsc 36 (51), turn—203
+(233) sc."})

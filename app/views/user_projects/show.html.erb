@@ -1,11 +1,39 @@
 <h1>Project Dashboard</h1>
-<%= link_to "Return to all Your Projects", user_user_projects_path(current_user.id) %>
+<%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %>
 
 <h3><%= @project.projtitle %></h3>
 
-<div class = patternbox>
-  <div class = patterntable>
-  <p><%= @project.description %></p>
+<div class = "currentInst">
+  <p>Current Instruction: #<%= @instructions.first.ordinal %> of <%= @instructions.last.ordinal %></p>
+</div>
+
+
+<div class="counter">
+  <h3>Repeated Row/Round Counter</h3>
+  <h5>Total # of Repeated Rows/Rounds: </h5><input id="repeatstotal" type="text" placeholder="Total repeats" /></br>
+  <input id="repeatstodo" type="text" placeholder="Left to do" />
+  <button class="button">+</button>
+  <button class="button">-</button>
+  <input id="repeatsdone" type="text" placeholder="Completed" />
+</div>
+
+
+<div class = "patternbox">
+  <div class = "patterntable">
+  <ul>
+<!-- <%# @instructions.each do |f| %>
+<li><strong>Instruction # <%#=f.ordinal%>:</strong></br>
+  <%#= f.instext %></li>
+  <%# end %> -->
+<%= @instructions.first.instext %>
+</ul>
+  </p>
 
   </div>
+
+</div>
+
+<div class = "patternbuttons">
+  <button class="button">+</button>
+  <button class="button">-</button>
 </div>

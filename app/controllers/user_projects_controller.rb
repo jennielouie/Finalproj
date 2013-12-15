@@ -21,12 +21,18 @@ class UserProjectsController < ApplicationController
   end
 
   def edit
+    @user_proj = UserProject.find(params[:id])
   end
 
   def update
+    @user_proj = UserProject.find(params[:id])
+    @user_project.update.attributes(params[:user_project])
+    redirect_to user_user_project_path(current_user, @user_proj)
   end
 
   def destroy
+    UserProject.delete(params[:id])
+    redirect_to user_user_projects_path(current_user)
   end
 
 end

@@ -34,8 +34,11 @@ ActiveRecord::Schema.define(:version => 20131213220805) do
     t.integer  "project_id"
     t.integer  "user_id"
     t.datetime "dueDate"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "currentInst"
+    t.integer  "totalRep"
+    t.integer  "repDone"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

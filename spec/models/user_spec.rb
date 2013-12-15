@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe User do
-  it "is valid with a name and email address" do
-    user = User.new(name: 'Jennie', email: 'foo@foo.com')
+  it "is valid with a name, password and email address" do
+    user = User.new(name: 'Jennie', email: 'foo@foo.com', password: '111111')
     expect(user).to be_valid
   end
   it "is invalid without a name" do
@@ -16,6 +16,7 @@ describe User do
   it "is invalid with a duplicated email address" do
     User.create(name: "Jennie", email: "foo@foo.com")
     user = User.new(name: 'Mike', email: "foo@foo.com")
+    user.save
     expect(user).to have(1).errors_on(:email)
   end
 

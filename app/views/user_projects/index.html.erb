@@ -3,7 +3,7 @@
 <p>Here's a list of your projects:<p>
 <ol>
   <% @user_proj_list.each do |f| %>
-<li><%= link_to "#{f.projtitle}", user_user_project_path(current_user.id, UserProject.where(:project_id => f.id,:user_id => current_user.id).first.id) %></li> </br>
+<li><%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></li> </br>
 
   <% end %>
 
