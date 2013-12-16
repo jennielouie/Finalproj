@@ -5,7 +5,7 @@
 </div>
 
 <div class ="signupbox">
-<h3>Please log in</h3>
+<h5>Please log in</h5>
 <%= form_tag sessions_path do %>
   <div class = "field">
     <%= label_tag :email %></br>
@@ -20,4 +20,5 @@
 <% end %>
 </div>
 
-  <button class="button" id="signUp">Not a Member?  Sign Up, it's Easy and Free!</button>
+<!--   <button class="button" id="signUp">Not a Member?  Sign Up, it's Easy and Free!</button> -->
+  <%= link_to "Not a Member?  Sign Up, it's Easy and Free!", new_user_path %></br>

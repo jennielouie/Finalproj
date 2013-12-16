@@ -78,7 +78,20 @@ $(function(){
 
 
 $('#savePlace').click(function() {
-  TINY.box.show({url: "/users/" + gon.user_proj.user_id+"/user_projects/" + gon.user_proj.project_id + "/edit", width:300, height:300})
+  console.log('hi');
+  var inst = $('#thisInst').text();
+  var tots = $('#repeatstotal').val();
+  var done = $('#repeatsdone').val();
+  console.log(inst, tots, done);
+  $.ajax( {
+        url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.project_id + ".json",
+        type: "PUT",
+        contentType: 'application/json',
+        data: JSON.stringify({currentInst: '1', totalRep: '4', repDone: '2'})
+  })
+  .done(function(result) {
+    alert('Your settings for this project have been saved.')
+  });
 });
 
 // function to grab project id from li id tag when selected, and input that to the project id text box on the new page

@@ -23,20 +23,26 @@ class UserProjectsController < ApplicationController
     @project = current_user.projects.find(@user_proj.project_id)
     gon.user_proj = @user_proj.attributes
     @instructions = Instruction.find_all_by_project_id(params[:id])
-    respond_to do |format|
+      respond_to do |format|
       format.html
       format.json { render :json => @instructions }
-    end
+      end
   end
 
   def edit
     @user_proj = current_user.user_projects.find(params[:id])
+      respond_to do |format|
+      format.html
+      format.json { render :json => @user_proj }
+      end
   end
 
   def update
     @user_proj = current_user.user_projects.find(params[:id])
-    @user_proj.update.attributes(params[:user_project])
-    redirect_to user_user_project_path(current_user, @user_proj)
+    @user_proj.update_attributes(params[:user_project])
+
+    render :nothing => true
+binding.pry
   end
 
   def destroy

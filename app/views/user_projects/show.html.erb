@@ -11,27 +11,20 @@
 <div class="counter">
   <h3>Repeated Row/Round Counter</h3>
   <h5>Total # of Repeated Rows/Rounds: </h5><input id="repeatstotal" type="text" placeholder="Total repeats" /></br>
-  <input id="repeatstodo" type="text" placeholder="Left to do" />
+  <h5>Left to do</h5><input id="repeatstodo" type="text" placeholder="Left to do" />
   <!-- should these be inputs or just innerHTML? should user be able to manually change counters? -->
   <button class="button" id="downcount">-</button>
   <button class="button" id="upcount">+</button>
-  <input id="repeatsdone" type="text" placeholder="Completed" />
+  <h5>Completed</h5><input id="repeatsdone" type="text" placeholder="Completed" />
 </div>
 
 
 <div class = "patternbox">
   <div class = "patterntable">
-  <ul>
-<!-- <%# @instructions.each do |f| %>
-<li><strong>Instruction # <%#=f.ordinal%>:</strong></br>
-  <%#= f.instext %></li>
-  <%# end %> -->
-<%= @instructions.first.instext %>
-</ul>
-  </p>
-
+      <ul>
+      <%= @instructions.first.instext %>
+      </ul>
   </div>
-
 </div>
 
 <div class = "patternbuttons">
@@ -40,5 +33,5 @@
 </div>
 
 <div class = "savebox">
-  <button class="button" id="savePlace">Save my place</button>
+  <button class="button" id="savePlace">Save my place</button></br>
 </div>
