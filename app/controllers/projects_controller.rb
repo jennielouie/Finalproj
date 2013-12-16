@@ -17,11 +17,11 @@ end
 
 def show
   @project = current_user.projects.find(params[:id])
-  # @instructions = Instruction.find_all_by_project_id(params[:id])
-  # respond_to do |format|
-  #   format.html
-  #   format.json { render :json => @instructions }
-  # end
+  @instructions = Instruction.find_all_by_project_id(params[:id])
+  respond_to do |format|
+    format.html
+    format.json { render :json => @instructions }
+  end
 end
 
 end

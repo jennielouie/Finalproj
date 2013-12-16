@@ -1,3 +1,29 @@
 <h1>User Project Edit Page</h1>
 
+<%= form_for ([current_user, @user_proj]) do |f| %>
+  <div class = "form-inputs">
+
+      <div class = "field">
+      <%= f.label "Current Instruction Number" %></br>
+      <%= f.text_field :currentInst %>
+      </div>
+
+    <div class = "field">
+      <%= f.label "Total number of repeated rows for current step" %></br>
+      <%= f.text_field :totalRep %>
+    </div>
+
+    <div class = "field">
+      <%= f.label "Number of repeats completed" %></br>
+      <%= f.text_field :repDone %>
+    </div>
+
+  </div>
+
+  <div class = "form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
 <%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %>

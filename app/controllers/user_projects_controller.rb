@@ -7,10 +7,14 @@ class UserProjectsController < ApplicationController
   def new
     @user_proj = UserProject.new
     @project = Project.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json {render :json => @project}
+    # end
   end
 
   def create
-    @user_project = UserProject.create(params[:user_project])
+    @user_proj = UserProject.create(params[:user_project])
     redirect_to user_user_projects_path(current_user.id)
   end
 

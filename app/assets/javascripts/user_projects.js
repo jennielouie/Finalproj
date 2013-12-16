@@ -39,16 +39,19 @@ $(function(){
     var repsDone = parseInt($('#repeatsdone').val());
     var repsTodo = totalRep - repsDone; //get value from repstotal and repsdone,
     if (repsDone >= totalRep) {
-      alert("Uh-oh, looks like you've done one too many repeats.");
+      alert("Uh-oh, looks like you've done " + (repsDone - totalRep + 1) + " too many repeats.");
+      repsDone++;
+      repsTodo=0;
     }
     else if (repsDone == totalRep-1) {
       repsDone++;
+      repsTodo = totalRep - repsDone;
       alert("Congrats you've finished all repeats");
     }
     else {
       repsDone++;
+      repsTodo = totalRep - repsDone;
     }
-    repsTodo = totalRep - repsDone;
     String(repsDone);
     String(repsTodo);
     $('#repeatsdone').val(repsDone);
@@ -72,6 +75,17 @@ $(function(){
       $('#repeatstodo').val(repsTodo);
     }
   });
+
+
+$('#savePlace').click(function() {
+  TINY.box.show({url: "/users/" + gon.user_proj.user_id+"/user_projects/" + gon.user_proj.project_id + "/edit", width:300, height:300})
+});
+
+// function to grab project id from li id tag when selected, and input that to the project id text box on the new page
+$('#ulprojlist').on('click', "li", function(event) {
+  $('#user_project_project_id').val($(this).attr("id"));
+});
+
 
 function changeInstruction(currOrdinal){
   $.ajax( {
