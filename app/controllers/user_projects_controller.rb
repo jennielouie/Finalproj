@@ -40,9 +40,7 @@ class UserProjectsController < ApplicationController
   def update
     @user_proj = current_user.user_projects.find(params[:id])
     @user_proj.update_attributes(params[:user_project])
-
     render :nothing => true
-binding.pry
   end
 
   def destroy

@@ -84,12 +84,12 @@ $('#savePlace').click(function() {
   var done = $('#repeatsdone').val();
   console.log(inst, tots, done);
   $.ajax( {
-        url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.project_id + ".json",
+        url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.project_id,
         type: "PUT",
         contentType: 'application/json',
-        data: JSON.stringify({currentInst: '1', totalRep: '4', repDone: '2'})
+        data: JSON.stringify({currentInst: inst, totalRep: tots, repDone: done})
   })
-  .done(function(result) {
+  .done(function() {
     alert('Your settings for this project have been saved.')
   });
 });
