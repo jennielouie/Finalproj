@@ -8,6 +8,11 @@
 // $('totalInsts')
 // var currOrdinal = 0;
 $(function(){
+  // Initialize values with any saved to this user_
+  // $('#repeatstotal').val(gon.totalRep);
+  // $('#repeatsdone').val(gon.repDone);
+
+
   var totalInsts = parseInt($('#totalInsts').text());
   var thisInst = parseInt($('#thisInst').text());
 
@@ -85,12 +90,12 @@ $('#savePlace').click(function() {
   var done = $('#repeatsdone').val();
   console.log(inst, tots, done);
   $.ajax( {
-        url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.project_id,
+        url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.id,
         type: "PUT",
         contentType: 'application/json',
         data: JSON.stringify({currentInst: inst, totalRep: tots, repDone: done})
   })
-  .done(function() {
+  .done(function(inst, tots, done) {
     alert('Your settings for this project have been saved.')
   });
 });

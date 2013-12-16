@@ -20,8 +20,8 @@ class UserProjectsController < ApplicationController
 
   def show
     @user_proj = current_user.user_projects.find(params[:id])
-    @project = current_user.projects.find(@user_proj.project_id)
     gon.user_proj = @user_proj.attributes
+    @project = current_user.projects.find(@user_proj.project_id)
     @instructions = Instruction.find_all_by_project_id(params[:id])
       respond_to do |format|
       format.html
