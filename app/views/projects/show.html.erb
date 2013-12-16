@@ -12,6 +12,15 @@
   <strong>Project Description: </strong>
   <%= @project.description %></br>
 
+<#%= form_for(current_user, @user_proj) do |d| %>
+  <#%= d.hidden_field :user_id, :value =>current_user.id%>
+  <#%= d.hidden_field :project_id, :value=>@project.id %>
+   <#% end %>
+
+  <div class = "form-actions">
+    <#%= d.submit %>
+  </div>
+
 <% @instructions.each do |f| %>
 <strong>Instruction # <%=f.ordinal%>:</strong></br>
   <%= f.instext %></br>

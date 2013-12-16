@@ -15,6 +15,7 @@ $(function(){
     if(thisInst < totalInsts) {
     thisInst++;
     var currOrdinal = thisInst;
+    console.log(currOrdinal);
     changeInstruction(currOrdinal);
     String(thisInst);
     $('#thisInst').text(thisInst);
@@ -102,7 +103,7 @@ $('#ulprojlist').on('click', "li", function(event) {
 
 function changeInstruction(currOrdinal){
   $.ajax( {
-      url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.project_id + ".json",
+      url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.id + ".json",
       type: "get"
   } ).done(function(data) {
     $('.patterntable').empty();
