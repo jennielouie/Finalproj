@@ -111,10 +111,19 @@ function changeInstruction(currOrdinal){
       url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.id + ".json",
       type: "get"
   } ).done(function(data) {
+    var instToPrint = data[currOrdinal-1].instext;
+    instToPrint = instToPrint.replace(/[,]/g, ',</li><li>').replace(/[.]/g, '.</li><li>').replace(/[;]/g, ';</li></li>');
+    // addNewlines(instToPrint);
     $('.patterntable').empty();
-    $('.patterntable').text(data[currOrdinal-1].instext);
+    $('.patterntable').html("<ol><li>" +instToPrint + "</ol>");
   });
 };
+
+// function addNewlines(textsample) {
+//   textsample = textsample.replace(/[,.;]/g, ',</br>');
+//   textsample = '<p>' + textsample + '</p>';
+// console.log(textsample);
+// }
 
 });
 
