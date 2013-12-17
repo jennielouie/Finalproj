@@ -125,5 +125,5 @@ float: right;
 border-radius: 5px;
 }
 
-li { background: gray; }
+li { background: SkyBlue; }
 li:nth-child(odd) { background: white; }

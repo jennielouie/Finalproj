@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131213220805) do
+ActiveRecord::Schema.define(:version => 20131217010955) do
 
   create_table "instructions", :force => true do |t|
     t.integer  "project_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20131213220805) do
     t.text     "pattern"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "regexCode"
   end
 
   create_table "user_projects", :force => true do |t|
