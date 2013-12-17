@@ -4,21 +4,24 @@
   <h4> Your Personal Assistant for Crochet and Knitting Projects </h4>
 </div>
 
-<div class ="signupbox">
-<h5>Please log in</h5>
+<h2>Please log in</h2>
+
 <%= form_tag sessions_path do %>
-  <div class = "field">
+  <div class = "form-group">
     <%= label_tag :email %></br>
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], :class => 'form-control' %>
   </div>
 
-  <div class = "field">
+  <div class = "form-group">
     <%= label_tag :password %></br>
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password, :class => 'form-control' %>
   </div>
-<%= submit_tag "SUBMIT", :class =>'button_form' %></br>
-<% end %>
+
+  <div class = "form-actions">
+<%= submit_tag "SUBMIT", :class =>'btn btn-default' %></br>
 </div>
+<% end %>
+
 
 <!--   <button class="button" id="signUp">Not a Member?  Sign Up, it's Easy and Free!</button> -->
   <%= link_to "Not a Member?  Sign Up, it's Easy and Free!", new_user_path %></br>
