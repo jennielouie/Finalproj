@@ -16,6 +16,8 @@ $(function(){
   var totalInsts = parseInt($('#totalInsts').text());
   var thisInst = parseInt($('#thisInst').text());
 
+changeInstruction(1);
+
   $('#nextInst').click(function(){
     if(thisInst < totalInsts) {
     thisInst++;
@@ -112,18 +114,12 @@ function changeInstruction(currOrdinal){
       type: "get"
   } ).done(function(data) {
     var instToPrint = data[currOrdinal-1].instext;
-    instToPrint = instToPrint.replace(/[,]/g, ',</li><li>').replace(/[.]/g, '.</li><li>').replace(/[;]/g, ';</li></li>');
+    instToPrint = instToPrint.replace(/[,]/g, ',</li><li>').replace(/[.]/g, '.</li><li>').replace(/[;]/g, ';</li><li>');
     // addNewlines(instToPrint);
     $('.patterntable').empty();
     $('.patterntable').html("<ol><li>" +instToPrint + "</ol>");
   });
 };
-
-// function addNewlines(textsample) {
-//   textsample = textsample.replace(/[,.;]/g, ',</br>');
-//   textsample = '<p>' + textsample + '</p>';
-// console.log(textsample);
-// }
 
 });
 

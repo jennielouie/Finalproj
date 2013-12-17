@@ -124,3 +124,6 @@ width: 10%;
 float: right;
 border-radius: 5px;
 }
+
+li { background: gray; }
+li:nth-child(odd) { background: white; }
