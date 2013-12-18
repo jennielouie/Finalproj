@@ -52,7 +52,7 @@
   text-align: left;
 }
 
-.patterntable {
+.patterntable, .projlistbox {
   max-height: 250px;
   overflow: scroll;
   border: solid gray;

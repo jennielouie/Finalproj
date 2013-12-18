@@ -1,9 +1,13 @@
-<h1>Stitcherdoodle Project Index Page </h1>
+<h1>All Stitcherdoodle Projects</h1>
 
 <h3>Here is a list of all projects in the database</h3>
 
-<ul>
-<% @projects.each do |project| %>
-<li>Project Name: <%=project.projtitle %></li>
-<% end %>
-</ul>
+<div class="col-xs-12 col-sm-8 col-md-8">
+   <div class = "patterntable">
+      <ol>
+      <% @projects.each do |project| %>
+      <li>Project Name: <%=project.projtitle %></li>
+      <% end %>
+      </ol>
+   </div>
+</div>

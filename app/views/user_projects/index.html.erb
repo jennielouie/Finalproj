@@ -5,8 +5,10 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 col-md-8">
 <dl class="dl-horizontal text-overflow">
+   <dt><h4>Project</h4></dt>
+   <dd><h4>Description</h4></dd>
   <% @user_proj_list.each do |f| %>
-<dt><%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
+<dt><%=f.id%>: <%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
 <dd><%=f.description %></dd>
 
   <% end %>
