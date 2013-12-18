@@ -1,21 +1,21 @@
 <%= form_for (@project) do |f| %>
-  <div class = "form-inputs">
-    <div class = "field">
+  <!-- <div class = "form-inputs"> -->
+    <div class = "form-group">
       <%= f.label "Project Title" %></br>
       <%= f.text_field :projtitle %>
     </div>
 
-    <div class = "field">
+    <div class = "form-group">
       <%= f.label "Project Author" %></br>
       <%= f.text_field :author %>
     </div>
 
-    <div class = "field">
+    <div class = "form-group">
       <%= f.label "Project Description" %></br>
-      <%= f.text_area :description %>
+      <%= f.text_field :description %>
     </div>
 
-    <div class = "field">
+    <div class = "form-group">
       <%= f.label "Pattern" %></br>
       <%= f.text_area :pattern %>
     </div>
@@ -30,7 +30,7 @@
 
 
   </div>
-  <div class = "form-actions">
+  <div class = "form-action">
     <%= f.submit %>
   </div>
 <% end %>

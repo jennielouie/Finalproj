@@ -30,30 +30,26 @@
   margin-right: 2%;
  }
 
- h1 {
+ h1, h2, h3, h4, h5 {
   font-family: 'Bitter', serif;
-  font-weight: 700;
-  font-size: 60px;
   color: initial;
  }
 
-h4 {
+/*h4 {
   font-family: 'Bitter', serif;
-  font-weight: 700;
-  font-size: 36px;
   color: initial;
- }
+ }*/
 
 
-input[type='submit'] {
+/*input[type='submit'] {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   width: 45%;
   height: 4%;
-}
+}*/
 
 
-.button {
+/*.button {
   padding      : 5px;
   font         : bold;
   font-family: 'Raleway', sans-serif;
@@ -63,12 +59,12 @@ input[type='submit'] {
   background   : none;
   cursor  : pointer;
 }
-
-.counter {
+*/
+/*.counter {
   float: right;
-}
+}*/
 
-.signupbox {
+/*.signupbox {
   background-color: ivory;
   opacity: 0.7;
   border-width: 1px;
@@ -78,8 +74,8 @@ input[type='submit'] {
   width: 55%;
   padding: 1%;
   border-radius: 10px;
-}
-.patternbox, .counter, .projlistbox {
+}*/
+/*.patternbox, .counter, .projlistbox {
   background-color: ivory;
   opacity: 0.7;
   border-width: 1px;
@@ -91,7 +87,7 @@ input[type='submit'] {
   overflow: scroll;
   padding: 1%;
   border-radius: 10px;
-}
+}*/
 
 /*.titlediv {
   background-color: ivory;
@@ -104,7 +100,7 @@ input[type='submit'] {
   padding: 1%;
   border-radius: 10px;
 }*/
-.field #email, #password {
+/*.field #email, #password {
   font-family: 'Raleway', sans-serif;
   border-width: 1px;
   border-style: solid;
@@ -123,7 +119,55 @@ text-align: center;
 width: 10%;
 float: right;
 border-radius: 5px;
+}*/
+
+/*Splash page jumbotron */
+.jumbotron {
+  background-image: url('crochet1fade.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
 }
 
-li { background: SkyBlue; }
-li:nth-child(odd) { background: white; }
+.jumbotron .h1 {
+  color: white;
+}
+
+/*Table formatting*/
+.dl-horizontal dt {
+    white-space: normal;
+    width: 250px;
+    text-align: left;
+}
+
+.patterntable {
+  max-height: 250px;
+  overflow: scroll;
+  border: solid gray;
+}
+
+li {
+ background: skyblue;
+}
+
+li:nth-child(odd) {
+ background: white;
+}
+
+/*button formatting*/
+a, .btn {
+  font-family: 'Bitter', serif;
+}
+
+#savePlace {
+  height: 92px;
+  font-size: 24px;
+  color: black;
+}
+
+/*Row counter inputs*/
+
+#repeatstotal, #repeatstodo, #repeatsdone {
+  height: 100px;
+  font-size: 24px;
+}
+

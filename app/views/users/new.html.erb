@@ -3,13 +3,13 @@
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
   <div class = "error_messages">
-    <h3>Sorry, the user data is invalid for the following reason(s):</h3>
+    <h4>Sorry, the user data is invalid for the following reason(s):</h4>
     <ol>
   <% for message in @user.errors.full_messages %>
   <li><%= message %></li>
   <% end %>
     </ol>
-    <h3>Please retry.</h3>
+    <h4>Please retry below</h4>
   </div>
 <% end %>
 

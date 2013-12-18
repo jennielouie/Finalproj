@@ -1,12 +1,28 @@
-<h1>Your Projects from User_user_project index page</h1>
-<div class ="signupbox">
-<p>Here's a list of your projects:<p>
-<ol>
+<div class = "page-header">
+<h1>Your Projects <small>Click on title to work on a project</small></h1>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-8">
+<dl class="dl-horizontal text-overflow">
   <% @user_proj_list.each do |f| %>
-<li><%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></li> </br>
+<dt><%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
+<dd><%=f.description %></dd>
 
   <% end %>
+</dl>
 
-<%= link_to "Create a new project", new_project_path %></br>
-<%= link_to "Add a project", new_user_user_project_path(current_user) %></br>
 </div>
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <button class="btn btn-default btn-lg"><%= link_to "Create a new project", new_project_path %></button>
+</br>
+</br>
+  <button class="btn btn-default btn-lg"><%= link_to "Add a project", new_user_user_project_path(current_user) %></button>
+
+</div>
+
+
+
+
+  <!-- Add the extra clearfix for only the required viewport -->
+  <!-- <div class="clearfix visible-xs"></div> -->

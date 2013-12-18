@@ -1,7 +1,8 @@
 
-<div class = "titlediv">
-  <h1>Welcome to Stitcherdoodle</h1>
-  <h4> Your Personal Assistant for Crochet and Knitting Projects </h4>
+<div class="jumbotron">
+  <h1 style='color:gold'>Welcome to Stitcherdoodle</h1>
+  <p style='color:gold'> Your Personal Assistant for Crochet and Knitting Projects </p>
+  <button><%= link_to "Sign Up for Free", new_user_path %></button>
 </div>
 
 <h2>Please log in</h2>
@@ -18,10 +19,10 @@
   </div>
 
   <div class = "form-actions">
-<%= submit_tag "SUBMIT", :class =>'btn btn-default' %></br>
+<%= submit_tag "SUBMIT", :class =>'btn btn-success' %></br>
 </div>
 <% end %>
 
 
 <!--   <button class="button" id="signUp">Not a Member?  Sign Up, it's Easy and Free!</button> -->
-  <%= link_to "Not a Member?  Sign Up, it's Easy and Free!", new_user_path %></br>
+  </br>

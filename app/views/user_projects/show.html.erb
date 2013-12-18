@@ -1,35 +1,58 @@
-<h1>Project Dashboard</h1>
-<%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %>
-
-<h3><%= @project.projtitle %></h3>
-
-<div class = "patternboxHeader">
-  <p>Current Instruction: #<span id="thisInst"><%= @instructions[0].ordinal %></span> of <span id="totalInsts"><%= @instructions.last.ordinal %></span></p>
+<div class = 'page-header'>
+  <h2>Project Dashboard: <%= @project.projtitle %></h2>
+  <%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %>
 </div>
 
+<div class="col-xs-12 col-sm-8 col-md-8">
+  <h3 style='text-align:center'>Current Instruction: <span id="thisInst"><%= @instructions[0].ordinal %></span> of <span id="totalInsts"><%= @instructions.last.ordinal %></span></h3>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <button class="btn btn-danger btn-lg btn-block" id="prevInst">Previous Instruction</button>
+    </div>
 
-<div class="counter">
-  <h3>Repeated Row/Round Counter</h3>
-  <h5>Total # of Repeated Rows/Rounds: </h5><input id="repeatstotal" type="text" placeholder="Total repeats" /></br>
-  <h5>Left to do</h5><input id="repeatstodo" type="text" placeholder="Left to do" />
-  <!-- should these be inputs or just innerHTML? should user be able to manually change counters? -->
-  <button class="button" id="downcount">-</button>
-  <button class="button" id="upcount">+</button>
-  <h5>Completed</h5><input id="repeatsdone" type="text" placeholder="Completed" />
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <button class="btn btn-success btn-lg btn-block" id="nextInst">Next Instruction</button>
+    </div>
 </div>
 
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <button class= "btn btn-warning btn-lg btn-block" id="savePlace">Save my progress</button></br>
+</div>
 
-<div class = "patternbox">
+<div class="col-xs-12 col-sm-8 col-md-8">
   <div class = "patterntable">
     <%= @instructions.first.instext %>
   </div>
 </div>
 
-<div class = "patternbuttons">
-  <button class="button" id="prevInst">-</button>
-  <button class="button" id="nextInst">+</button>
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <h3 style='text-align:center'>Row Counter</h3>
+  <label for="repeatstotal"><h4>Total # of Repeated Rows: </h4></label>
+    <input type="text" id="repeatstotal" placeholder="Total repeats" class="form-control" />
+
+<!-- <div class="row">
+  <div class="form-group col-xs-5 col-lg-1">
+    <label for="repeatstotal"><h4>Total # of Repeated Rows: </h4></label>
+    <input type="text" id="repeatstotal" placeholder="Total repeats" class="form-control" />
+  </div> -->
+
+
+  <div class="form-group col-xs-5 col-lg-1">
+    <label for="repeatstodo"><h4>Left to do</h4></label>
+    <input type="text" id="repeatstodo" placeholder="Rows remaining" class="form-control" />
+    <button class="btn btn-danger btn-sm" id="downcount">Undid one round</button>
+  </div>
+
+  <div class="form-group col-xs-5 col-lg-1">
+    <label for="repeatsdone"><h4>Completed</h4></label>
+    <input type="text" id="repeatsdone" placeholder="Rows done" class="form-control" />
+    <button class="btn btn-success btn-sm" id="upcount">Completed one round!</button>
+  </div>
+
+  <!-- <h5>Total # of Repeated Rows: </h5><input id="repeatstotal" type="text" placeholder="Total repeats" /></br> -->
+  <!-- <h5>Left to do</h5><input id="repeatstodo" type="text" placeholder="Left to do" /> -->
+  <!-- <h5>Completed</h5><input id="repeatsdone" type="text" placeholder="Completed" /></br> -->
+  <!-- should these be inputs or just innerHTML? should user be able to manually change counters? -->
+
+
 </div>
 
-<div class = "savebox">
-  <button class="button" id="savePlace">Save my place</button></br>
-</div>
