@@ -4,6 +4,7 @@ class UserProjectsController < ApplicationController
     @user_proj_list = current_user.projects
   end
 
+# gon used to pass current user info
   def new
     @user_proj = UserProject.new
     @project = Project.all
@@ -26,23 +27,22 @@ class UserProjectsController < ApplicationController
     @instructions = Instruction.find_all_by_project_id(params[:id])
       respond_to do |format|
       format.html
-      format.json { render :json => @instructions }
+      format.json {render :json => @instructions} #javascript changeInstruction function uses this json to get project instructions
       end
   end
 
   def edit
     @user_proj = current_user.user_projects.find(params[:id])
-      respond_to do |format|
-      format.html
-      format.json { render :json => @user_proj }
-      end
+      # respond_to do |format|
+      # format.html
+      # format.json {render :json => @user_proj} #
+      # end
   end
 
   def update
-
     @user_proj = current_user.user_projects.find(params[:id])
     @user_proj.update_attributes(params[:user_project])
-    render :nothing => true
+    render :nothing => true #because request sent via ajax, this prevents redirecting to the "show" page
   end
 
   def destroy

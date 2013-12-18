@@ -2,13 +2,13 @@
 <div class="jumbotron">
   <h1>Welcome to Stitcherdoodle</h1>
   <p> Your Personal Assistant for Crochet and Knitting Projects </p>
-  <button><%= link_to "Sign Up for Free", new_user_path %></button>
+  <button><%= link_to "Sign Up, it's Free!", new_user_path %></button>
 </div>
 
 <h2>Please log in</h2>
 
-<%= form_tag sessions_path do %>
 <div class="col-xs-12 col-sm-6 col-md-6">
+<%= form_tag sessions_path do %>
   <div class = "form-group">
     <%= label_tag :email %></br>
     <%= text_field_tag :email, params[:email], :class => 'form-control' %>
@@ -19,12 +19,8 @@
     <%= password_field_tag :password, :placeholder => "Password",:class => 'form-control' %>
   </div>
 
-
   <div class = "form-actions">
     <%= submit_tag "SUBMIT", :class =>'btn btn-success' %></br>
   </div>
 <% end %>
 </div>
-
-<!--   <button class="button" id="signUp">Not a Member?  Sign Up, it's Easy and Free!</button> -->
-  </br>

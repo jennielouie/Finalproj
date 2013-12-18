@@ -1,19 +1,9 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
  *= require_tree .
  */
 
- html,body
-{
+ html,body {
   height: 100%;
   width: 95%;
 }
@@ -21,7 +11,6 @@
  body {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  /*background-image: url('crocpurp2.jpg');*/
   background-size:100%;
   background-repeat:no-repeat;
   background-position: center;
@@ -35,92 +24,6 @@
   color: initial;
  }
 
-/*h4 {
-  font-family: 'Bitter', serif;
-  color: initial;
- }*/
-
-
-/*input[type='submit'] {
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-  width: 45%;
-  height: 4%;
-}*/
-
-
-/*.button {
-  padding      : 5px;
-  font         : bold;
-  font-family: 'Raleway', sans-serif;
-  font-size: 40px;
-  border       : 2px solid #333;
-  border-radius: 5px;
-  background   : none;
-  cursor  : pointer;
-}
-*/
-/*.counter {
-  float: right;
-}*/
-
-/*.signupbox {
-  background-color: ivory;
-  opacity: 0.7;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #999999;
-  margin: 0.5em;
-  width: 55%;
-  padding: 1%;
-  border-radius: 10px;
-}*/
-/*.patternbox, .counter, .projlistbox {
-  background-color: ivory;
-  opacity: 0.7;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #999999;
-  margin: 0.5em;
-  width: 40%;
-  height: 50%;
-  overflow: scroll;
-  padding: 1%;
-  border-radius: 10px;
-}*/
-
-/*.titlediv {
-  background-color: ivory;
-  opacity: 0.7;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #999999;
-  margin: 0.5em;
-  width: 80%;
-  padding: 1%;
-  border-radius: 10px;
-}*/
-/*.field #email, #password {
-  font-family: 'Raleway', sans-serif;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #999999;
-  border-radius: 5px;
-  margin: 0.5em;
-  font-size: 24px;
-  color: #333333;
-  width: 90%;
-  height: 40px;
-}
-
-#user_nav {
-background-color: ivory;
-text-align: center;
-width: 10%;
-float: right;
-border-radius: 5px;
-}*/
-
 /*Splash page jumbotron */
 .jumbotron, #bs-example-navbar-collapse-1  {
   background-image: url('cropurp3.jpg');
@@ -132,17 +35,21 @@ border-radius: 5px;
   color: gold;
 }
 
+/*Nav bar*/
 .navbar-default .navbar-brand {
   color: gold;
   font-size: 36px ;
-  }
+}
 
+.navbar-default .navbar-nav>li>a {
+  color: gold;
+}
 
-/*Table formatting*/
+/*Tables*/
 .dl-horizontal dt {
-    white-space: normal;
-    width: 250px;
-    text-align: left;
+  white-space: normal;
+  width: 250px;
+  text-align: left;
 }
 
 .patterntable {
@@ -152,16 +59,19 @@ border-radius: 5px;
 }
 
 li {
- background: lightgrey;
+  background: lightgrey;
 }
 
 li:nth-child(odd) {
- background: white;
+  background: white;
 }
 
-/*button formatting*/
+li:hover {
+  background: skyblue;
+  cursor: pointer;
+}
 
-
+/*Buttons*/
 a, .btn {
   font-family: 'Bitter', serif;
 }
@@ -169,26 +79,4 @@ a, .btn {
 .btn-danger {
   background-color: darkslateblue;
   border-color: darkslateblue;
-}
-
-/*#savePlace {
-  height: 92px;
-  font-size: 24px;
-  color: black;
-}
-
-#upcount, #downcount {
-  height: 92px;
-  font-size: 48px;
-}*/
-
-/*Row counter inputs*/
-/*
-#repeatstodo, #repeatsdone {
-  height: 100px;
-  font-size: 24px;
-}*/
-
-.navbar-default .navbar-nav>li>a {
-  color: gold;
 }
