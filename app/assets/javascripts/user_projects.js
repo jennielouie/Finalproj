@@ -94,6 +94,7 @@ $('#savePlace').click(function() {
   $.ajax( {
         url: "/users/" + gon.user_proj.user_id + "/user_projects/" + gon.user_proj.id,
         type: "PUT",
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
         contentType: 'application/json',
         data: JSON.stringify({currentInst: inst, totalRep: tots, repDone: done})
   })

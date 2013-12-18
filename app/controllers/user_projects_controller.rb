@@ -1,3 +1,4 @@
+require 'pry'
 class UserProjectsController < ApplicationController
 
   def index
@@ -7,6 +8,7 @@ class UserProjectsController < ApplicationController
   def new
     @user_proj = UserProject.new
     @project = Project.all
+    gon.user_proj = @user_proj.attributes
     # respond_to do |format|
     #   format.html
     #   format.json {render :json => @project}
@@ -38,6 +40,7 @@ class UserProjectsController < ApplicationController
   end
 
   def update
+
     @user_proj = current_user.user_projects.find(params[:id])
     @user_proj.update_attributes(params[:user_project])
     render :nothing => true

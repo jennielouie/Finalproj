@@ -1,7 +1,0 @@
-// $(function(){
-
-//   $('#signUp').click(function() {
-
-//   });
-
-// });
