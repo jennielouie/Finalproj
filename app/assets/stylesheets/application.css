@@ -41,8 +41,9 @@
   font-size: 36px ;
 }
 
-.navbar-default .navbar-nav>li>a {
-  color: gold;
+
+.navbar-default .navbar-nav>li>a> {
+  color:darkgrey;
 }
 
 /*Tables*/
@@ -70,13 +71,50 @@ li:hover {
   background: skyblue;
   cursor: pointer;
 }
+/*Anchors*/
+a {
+  font-family: 'Bitter', serif;
+  color: darkslateblue;
+}
 
 /*Buttons*/
-a, .btn {
+.btn {
   font-family: 'Bitter', serif;
+
 }
 
 .btn-danger {
   background-color: darkslateblue;
   border-color: darkslateblue;
+}
+
+.btn-danger:hover {
+color: #fff;
+background-color: #DAA520;
+border-color: #DAA520;
+}
+
+/*Row counter numbers*/
+.rowcounter {
+  /*font-size: 32px;*/
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 80px;
+  padding: 6px 12px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.bigfont {
+  font-size: 44px;
 }

@@ -3,18 +3,32 @@
 </div>
 
 <div class="row">
-  <div class="col-xs-12 col-sm-8 col-md-8">
-<dl class="dl-horizontal text-overflow">
-   <dt><h4>Project</h4></dt>
-   <dd><h4>Description</h4></dd>
-  <% @proj_list.each do |f| %>
-<dt><%=f.id%>: <%= link_to "#{f.projtitle.capitalize}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
-<dd><%=f.description.capitalize %> <%=button_to "Delete this project", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first),{ action: "destroy", method: :delete, data: { confirm: "Are you sure?", remote: true } }%></dd>
-
-  <% end %>
-</dl>
-
+   <div class="col-xs-12 col-sm-8 col-md-8">
+      <div class="table-responsive">
+         <table class="table table-hover table-condensed table-striped">
+            <thead>
+             <tr>
+               <th>#</th>
+               <th>Project Name</th>
+               <th>Description</th>
+               <th></th>
+             </tr>
+            </thead>
+            <tbody>
+               <% @proj_list.each do |f| %>
+                <tr>
+                  <td><%=f.id%></td>
+                  <td><%= link_to "#{f.projtitle.capitalize}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></td>
+                  <td><%=f.description%></td>
+                  <td><%=button_to "Delete this project", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first),{ action: "destroy", method: :delete, data: { confirm: "Are you sure?", remote: true }, :class=> "btn btn-danger" }%></td>
+                </tr>
+               <% end %>
+            </tbody>
+         </table>
+      </div>
+   </div>
 </div>
+
 <div class="col-xs-12 col-sm-4 col-md-4">
   <button class="btn btn-default btn-lg"><%= link_to "Create a new project", new_project_path %></button>
 </br>
