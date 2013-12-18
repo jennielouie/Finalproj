@@ -54,7 +54,8 @@ $(function(){
       else if (repsDone == totalRep-1) {
         repsDone++;
         repsTodo = totalRep - repsDone;
-        alert("Congrats you've finished all repeats");
+        // alert("Congrats you've finished all repeats");
+        $('#repDoneModal').modal();
       }
       else {
         repsDone++;

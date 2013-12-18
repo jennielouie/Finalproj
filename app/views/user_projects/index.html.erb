@@ -7,9 +7,9 @@
 <dl class="dl-horizontal text-overflow">
    <dt><h4>Project</h4></dt>
    <dd><h4>Description</h4></dd>
-  <% @user_proj_list.each do |f| %>
+  <% @proj_list.each do |f| %>
 <dt><%=f.id%>: <%= link_to "#{f.projtitle.capitalize}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
-<dd><%=f.description.capitalize %></dd>
+<dd><%=f.description.capitalize %> <%=button_to "Delete this project", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first),{ action: "destroy", method: :delete, data: { confirm: "Are you sure?", remote: true } }%></dd>
 
   <% end %>
 </dl>

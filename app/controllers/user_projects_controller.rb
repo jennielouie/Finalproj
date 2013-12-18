@@ -1,7 +1,8 @@
+require 'pry'
 class UserProjectsController < ApplicationController
 
   def index
-    @user_proj_list = current_user.projects
+    @proj_list = current_user.projects
   end
 
 # gon used to pass current user info
@@ -46,7 +47,7 @@ class UserProjectsController < ApplicationController
   end
 
   def destroy
-    current_user.user_projects.delete(params[:id])
+    current_user.user_projects.destroy(params[:id])
     redirect_to user_user_projects_path(current_user)
   end
 
