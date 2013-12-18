@@ -19,6 +19,9 @@ $(function(){
       changeInstruction(currOrdinal);
       String(thisInst);
       $('#thisInst').text(thisInst);
+      $('#repeatstotal').val(0);
+      $('#repeatsdone').val(0);
+      $('#repeatstodo').val(0);
       }
       else alert("You've reached the last instruction for this project.");
     });
@@ -31,6 +34,9 @@ $(function(){
       changeInstruction(currOrdinal);
       String(thisInst);
       $('#thisInst').text(thisInst);
+      $('#repeatstotal').val(0);
+      $('#repeatsdone').val(0);
+      $('#repeatstodo').val(0);
       }
       else alert("You've reached the first instruction for this project.");
     });

@@ -8,8 +8,8 @@
    <dt><h4>Project</h4></dt>
    <dd><h4>Description</h4></dd>
   <% @user_proj_list.each do |f| %>
-<dt><%=f.id%>: <%= link_to "#{f.projtitle}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
-<dd><%=f.description %></dd>
+<dt><%=f.id%>: <%= link_to "#{f.projtitle.capitalize}", user_user_project_path(current_user, UserProject.where(:project_id => f.id,:user_id => current_user.id).first) %></dt>
+<dd><%=f.description.capitalize %></dd>
 
   <% end %>
 </dl>
@@ -22,9 +22,3 @@
   <button class="btn btn-default btn-lg"><%= link_to "Add a project", new_user_user_project_path(current_user) %></button>
 
 </div>
-
-
-
-
-  <!-- Add the extra clearfix for only the required viewport -->
-  <!-- <div class="clearfix visible-xs"></div> -->

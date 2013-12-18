@@ -6,9 +6,10 @@
 </div>
 
 <!-- Button trigger modal -->
-<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Sign Up, it's Free
-</button>
+<div class="col-xs-12 col-sm-4 col-md-4">
+  <h2>Please log in or </h2><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Sign Up for Free</button>
+</div>
+</br>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -52,8 +53,6 @@
             <%= f.password_field :password_confirmation %>
           </div>
 
-          <!-- <div class = "form-action"><%#= f.submit %></div>
-          <#% end %> -->
       </div>
       <div class="modal-footer">
         <%= f.submit "Join Now", class: "btn btn-success" %>
@@ -64,8 +63,6 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<h2>Please log in</h2>
 
 <div class="col-xs-12 col-sm-6 col-md-6">
 <%= form_tag sessions_path do %>
