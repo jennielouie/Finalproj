@@ -20,8 +20,8 @@
 
  body {
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
-  /*background-image: url('crochet1fade.jpg');*/
+  font-size: 20px;
+  /*background-image: url('crocpurp2.jpg');*/
   background-size:100%;
   background-repeat:no-repeat;
   background-position: center;
@@ -122,15 +122,21 @@ border-radius: 5px;
 }*/
 
 /*Splash page jumbotron */
-.jumbotron {
-  background-image: url('crochet1fade.jpg');
+.jumbotron, #bs-example-navbar-collapse-1  {
+  background-image: url('cropurp3.jpg');
   background-size: cover;
   background-repeat:no-repeat;
 }
 
-.jumbotron .h1 {
-  color: white;
+.jumbotron h1, p {
+  color: gold;
 }
+
+.navbar-default .navbar-brand {
+  color: gold;
+  font-size: 36px ;
+  }
+
 
 /*Table formatting*/
 .dl-horizontal dt {
@@ -146,7 +152,7 @@ border-radius: 5px;
 }
 
 li {
- background: skyblue;
+ background: lightgrey;
 }
 
 li:nth-child(odd) {
@@ -154,11 +160,18 @@ li:nth-child(odd) {
 }
 
 /*button formatting*/
+
+
 a, .btn {
   font-family: 'Bitter', serif;
 }
 
-#savePlace {
+.btn-danger {
+  background-color: darkslateblue;
+  border-color: darkslateblue;
+}
+
+/*#savePlace {
   height: 92px;
   font-size: 24px;
   color: black;
@@ -167,12 +180,15 @@ a, .btn {
 #upcount, #downcount {
   height: 92px;
   font-size: 48px;
-}
+}*/
 
 /*Row counter inputs*/
-
+/*
 #repeatstodo, #repeatsdone {
   height: 100px;
   font-size: 24px;
-}
+}*/
 
+.navbar-default .navbar-nav>li>a {
+  color: gold;
+}
