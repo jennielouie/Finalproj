@@ -101,7 +101,8 @@ $(function(){
       data: JSON.stringify({currentInst: inst, totalRep: tots, repDone: done})
     })
     .done(function(inst, tots, done) {
-      alert('Your settings for this project have been saved.')
+      // alert('Your settings for this project have been saved.')
+      $('#savedModal').modal();
     });
   });
 
