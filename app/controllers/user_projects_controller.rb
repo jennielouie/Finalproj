@@ -25,7 +25,7 @@ class UserProjectsController < ApplicationController
     @user_proj = current_user.user_projects.find(params[:id])
     gon.user_proj = @user_proj.attributes
     @project = current_user.projects.find(@user_proj.project_id)
-    @instructions = Instruction.find_all_by_project_id(params[:id])
+    @instructions = Instruction.find_all_by_project_id(@user_proj.project_id)
       respond_to do |format|
       format.html
       format.json {render :json => @instructions} #javascript changeInstruction function uses this json to get project instructions

@@ -1,3 +1,4 @@
+
 class ProjectsController < ApplicationController
 
 def index
@@ -22,6 +23,7 @@ def show
   respond_to do |format|
     format.html
     format.json { render :json => @instructions }
+
   end
 end
 

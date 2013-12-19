@@ -54,7 +54,7 @@
 }
 
 .patterntable, .projlistbox {
-  max-height: 250px;
+  max-height: 350px;
   overflow: scroll;
   border: solid gray;
 }
@@ -94,6 +94,13 @@ background-color: #DAA520;
 border-color: #DAA520;
 }
 
+#upcount, #downcount {
+  margin-bottom: 40px;
+}
+
+#savePlace {
+  margin-top: 40px;
+}
 /*Row counter numbers*/
 .rowcounter {
   /*font-size: 32px;*/

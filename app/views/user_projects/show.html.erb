@@ -1,14 +1,14 @@
 <ul class="nav nav-tabs">
-  <li class="active"><a href="#">Project Dashboard</a></li>
+  <li class="active"><a href="#">Current Project: <%= @project.projtitle.capitalize %></a></li>
   <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
   <!-- <li><a href="#">Messages</a></li> -->
 </ul>
-
+<!--
 
 <div class = 'page-header'>
-  <h2><%= @project.projtitle.capitalize %></h2>
-  <!-- <h5><%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %></h5> -->
-</div>
+  <h3></h3>
+  <h5><%#= link_to "Return to all Your Projects", user_user_projects_path(current_user) %></h5>
+</div> -->
 
 <div class="col-xs-12 col-sm-8 col-md-8">
   <h3 style='text-align:center'>Current Instruction: <span id="thisInst"><%= @instructions[0].ordinal %></span> of <span id="totalInsts"><%= @instructions.last.ordinal %></span></h3>
@@ -49,15 +49,14 @@
         <button class="btn btn-success btn-lg btn-block bigfont" id="upcount">+</button>
     </div>
 
+    <button class= "btn btn-warning btn-lg btn-block" id="savePlace">Save my progress</button></br>
+
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12">
 <!--   </br> -->
 </div>
 
-<div class="col-xs-12 col-sm-8 col-md-8">
-  <button class= "btn btn-warning btn-lg btn-block" id="savePlace">Save my progress</button></br>
-</div>
+
 
 <%= render 'modal' %>
-<%= render 'alert' %>

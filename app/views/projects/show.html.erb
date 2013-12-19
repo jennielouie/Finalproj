@@ -1,8 +1,11 @@
-<h1>Stitcherdoodle Project: <%= @project.projtitle %></h1>
-<%= link_to "Return to all Your Projects", user_user_projects_path(current_user.id) %>
-<h3>Here is a summary of your newly created project (but it's not linked to your project_users profile yet): </h3>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Project Dashboard</a></li>
+  <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
+</ul>
 
-<p>
+<h1>Stitcherdoodle Project: <%= @project.projtitle %></h1>
+
+<h3>Here is a summary of your newly created project: </h3>
 
   <strong>Project Author: </strong>
   <%= @project.author %></br>
@@ -10,18 +13,27 @@
   <strong>Project Description: </strong>
   <%= @project.description %></br>
 
-<#%= form_for(current_user, @user_proj) do |d| %>
-  <#%= d.hidden_field :user_id, :value =>current_user.id%>
-  <#%= d.hidden_field :project_id, :value=>@project.id %>
-   <#% end %>
+   <strong>Total # of Instructions: </strong><%= @instructions.last.ordinal %></br>
 
-  <div class = "form-actions">
-    <#%= d.submit %>
-  </div>
-
-<% @instructions.each do |f| %>
-<strong>Instruction # <%=f.ordinal%>:</strong></br>
-  <%= f.instext %></br>
-  <% end %>
-</p>
-
+<div class="row">
+   <div class="col-xs-12 col-sm-8 col-md-8">
+      <div class="table-responsive patterntable">
+         <table class="table table-hover table-condensed table-striped">
+            <thead>
+             <tr>
+               <th>Instr. #</th>
+               <th>Details</th>
+             </tr>
+            </thead>
+            <tbody>
+               <% @instructions.each do |f| %>
+                <tr>
+                  <td><%=f.ordinal%></td>
+                  <td><%= f.instext%></td>
+                </tr>
+               <% end %>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</div>
