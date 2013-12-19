@@ -1,4 +1,3 @@
-require 'pry'
 class UserProjectsController < ApplicationController
 
   def index
