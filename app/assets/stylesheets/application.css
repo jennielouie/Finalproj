@@ -24,32 +24,23 @@
   color: initial;
  }
 
-/*Splash page jumbotron */
-.jumbotron, #bs-example-navbar-collapse-1  {
-  background-image: url('cropurp3.jpg');
-  background-size: cover;
-  background-repeat:no-repeat;
-}
-
-.jumbotron h1, p {
-  color: gold;
-}
-
 
 /*Carousel*/
-
 .carousel-inner h1 {
   color: gold;
+  font-size: 60px;
 }
 
+/*Forms*/
 
-
+#email {
+  font-size: 24px;
+}
 /*Nav bar*/
 .navbar-default .navbar-brand {
   color: gold;
   font-size: 36px ;
 }
-
 
 .navbar-default .navbar-nav>li>a> {
   color:darkgrey;
@@ -80,27 +71,27 @@ li:hover {
   background: skyblue;
   cursor: pointer;
 }
+
 /*Anchors*/
 a {
   font-family: 'Bitter', serif;
-  color: darkslateblue;
+  color: #483D8B;
 }
 
 /*Buttons*/
 .btn {
   font-family: 'Bitter', serif;
-
 }
 
-.btn-danger {
+.btn-danger, .btn-danger:active, .btn-danger:focus:active, .btn-danger:focus,.open .dropdown-toggle.btn-danger {
   background-color: darkslateblue;
   border-color: darkslateblue;
 }
 
 .btn-danger:hover {
-color: #fff;
-background-color: #DAA520;
-border-color: #DAA520;
+  color: #fff;
+  background-color: #DAA520;
+  border-color: #DAA520;
 }
 
 #upcount, #downcount {
@@ -110,6 +101,7 @@ border-color: #DAA520;
 #savePlace {
   margin-top: 40px;
 }
+
 /*Row counter numbers*/
 .rowcounter {
   /*font-size: 32px;*/

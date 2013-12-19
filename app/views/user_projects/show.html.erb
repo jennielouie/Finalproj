@@ -1,15 +1,12 @@
+<!-- User_Project Show Page -->
+
+<!-- Navigation bar -->
 <ul class="nav nav-tabs">
   <li class="active"><a href="#">Current Project: <%= @project.projtitle.capitalize %></a></li>
   <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
-  <!-- <li><a href="#">Messages</a></li> -->
 </ul>
-<!--
 
-<div class = 'page-header'>
-  <h3></h3>
-  <h5><%#= link_to "Return to all Your Projects", user_user_projects_path(current_user) %></h5>
-</div> -->
-
+<!-- Instructions window -->
 <div class="col-xs-12 col-sm-8 col-md-8">
   <h3 style='text-align:center'>Current Instruction: <span id="thisInst"><%= @instructions[0].ordinal %></span> of <span id="totalInsts"><%= @instructions.last.ordinal %></span></h3>
 
@@ -29,6 +26,7 @@
   </br>
 </div>
 
+<!-- Repeated Row Interface -->
 <div class="col-xs-12 col-sm-4 col-md-4 row-fluid">
   <h3 style='text-align:center'>Row Counter</h3>
   <label for="repeatstotal"><h4>Total # of Repeated Rows: </h4></label>
@@ -36,27 +34,17 @@
 
 
     <div class="col-xs-12 col-sm-6 col-md-6">
-    <!--   <div class="form-group col-xs-6 col-lg-1"> -->
-        <label for="repeatstodo" style='text-align:center'><h4>Remaining</h4></label>
-        <input type="text" id="repeatstodo" class="rowcounter bigfont" />
-        <button class="btn btn-danger btn-lg btn-block bigfont" id="downcount">-</button>
+      <label for="repeatstodo" style='text-align:center'><h4>Remaining</h4></label>
+      <input type="text" id="repeatstodo" class="rowcounter bigfont" />
+      <button class="btn btn-danger btn-lg btn-block bigfont" id="downcount">-</button>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-6">
-        <label for="repeatsdone" style='text-align:center'><h4>Done</h4></label>
-        <!-- <input type="text" id="repeatsdone" class="form-control" /> -->
-        <input type="text" id="repeatsdone" class = 'rowcounter bigfont' />
-        <button class="btn btn-success btn-lg btn-block bigfont" id="upcount">+</button>
+      <label for="repeatsdone" style='text-align:center'><h4>Done</h4></label>
+      <input type="text" id="repeatsdone" class = 'rowcounter bigfont' />
+      <button class="btn btn-success btn-lg btn-block bigfont" id="upcount">+</button>
     </div>
-
     <button class= "btn btn-warning btn-lg btn-block" id="savePlace">Save my progress</button></br>
-
 </div>
-
-<div class="col-xs-12 col-sm-12 col-md-12">
-<!--   </br> -->
-</div>
-
-
 
 <%= render 'modal' %>

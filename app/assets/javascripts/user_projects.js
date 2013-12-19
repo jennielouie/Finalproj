@@ -23,7 +23,8 @@ $(function(){
       $('#repeatsdone').val(0);
       $('#repeatstodo').val(0);
       }
-      else alert("You've reached the last instruction for this project.");
+      else $('#projDoneModal').modal();
+      // alert("You've reached the last instruction for this project.");
     });
 
 // Button to show previous instruction
@@ -54,7 +55,6 @@ $(function(){
       else if (repsDone == totalRep-1) {
         repsDone++;
         repsTodo = totalRep - repsDone;
-        // alert("Congrats you've finished all repeats");
         $('#repDoneModal').modal();
       }
       else {

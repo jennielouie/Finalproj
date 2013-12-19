@@ -1,6 +1,11 @@
+<!-- New User_Project Page -->
+
+<ul class="nav nav-tabs">
+  <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
+</ul>
+
 <h1>Add a New Project to your Dashboard</h1>
 <div class="col-xs-12 col-sm-8 col-md-8">
-
   <h4>Select a Project to Add</h4>
   <div class="projlistbox">
     <ol id="ulprojlist">
@@ -11,24 +16,18 @@
   </div>
   </br>
   <button class="btn btn-default btn-lg"><%= link_to "Or create a new project", new_project_path %></button>
-</br>
-  <%= link_to "Return to all Your Projects", user_user_projects_path(current_user) %>
 </div>
 
 <div class="col-xs-12 col-sm-4 col-md-4 row-fluid">
-
   <%= form_for([current_user, @user_proj]) do |f|%>
-    <!-- <div class="col-xs-12 col-sm-6 col-md-6"> -->
-      <div class = "field">
-        <%= f.label "Project ID:" %></br>
-        <%= f.text_field :project_id %>
-      </div>
-      </br>
-
-      <%=f.hidden_field :user_id, :value =>current_user.id %>
-      <div class = "form-actions">
-        <button class="btn btn-success btn-lg btn-block"><% f.submit%>Submit</button>
-      </div>
+    <div class = "field">
+      <%= f.label "Project ID:" %></br>
+      <%= f.text_field :project_id %>
+    </div>
+    </br>
+    <%=f.hidden_field :user_id, :value =>current_user.id %>
+    <div class = "form-actions">
+      <button class="btn btn-success btn-lg btn-block"><% f.submit%>Submit</button>
+    </div>
   <% end %>
-    <!-- </div> -->
 </div>

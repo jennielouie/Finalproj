@@ -1,6 +1,6 @@
 
-$(document).ready(function(){
-          $('.carousel').carousel({
-            interval: 5000
-          });
-        });
+// $(document).ready(function(){
+//    $('.carousel slide').carousel({
+//       interval: 8000
+//    });
+// });

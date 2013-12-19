@@ -7,7 +7,6 @@ end
 
 def new
   @project = Project.new
-  # @user_proj = UserProject.new
 end
 
 def create
@@ -20,11 +19,10 @@ def show
   @project = Project.find(params[:id])
   # could not user current_user.projects here because current_user not yet linked to project
   @instructions = Instruction.find_all_by_project_id(params[:id])
-  respond_to do |format|
-    format.html
-    format.json { render :json => @instructions }
-
-  end
+    respond_to do |format|
+      format.html
+      format.json { render :json => @instructions }
+    end
 end
 
 end

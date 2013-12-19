@@ -1,36 +1,34 @@
+<!-- Homepage/Sign In/Sign Up Page -->
+
 <!-- Carousel -->
- <div id="this-carousel-id" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="item active">
+<div id="this-carousel-id" class="carousel slide" >
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="carousel-caption">
+        <h1>Welcome to Stitcherdoodle</h1></br><h3 style='color:gold; font-family: Raleway, sans-serif'>Your Personal Assistant for Knitting and Crochet Projects</h3>
+      </div>
+      <img src="assets/crocarousel.jpg" alt="crochet" />
+    </div>
 
-              <div class="carousel-caption">
-                <h1>Your Personal Assistant for Knitting and Crochet Projects</h1>
-              </div>
-              <img src="assets/crocarousel.jpg" alt="crochet" />
-            </div>
+    <div class="item">
+      <img src="assets/pattern.jpg" alt="pattern" />
+      <div class="carousel-caption">
+        <h1 style='color:midnightblue'>Stitcherdoodle can turn this.....</h1>
+      </div>
+    </div>
 
-            <div class="item">
-              <img src="assets/pattern.jpg" alt="pattern" />
-              <div class="carousel-caption">
-                <h1 style='color:darkslateblue'>Stitcherdoodle can turn this.....</h1>
-              </div>
-            </div>
+    <div class="item">
+      <img src="assets/ipadcarousel.jpg" alt="crochet" />
+      <div class="carousel-caption">
+        <h1 style='color:midnightblue'>....into this </h1>
+      </div>
+    </div>
+  </div>
+      <a class="left carousel-control" href="#this-carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#this-carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
 
-            <div class="item">
-              <img src="assets/crocarousel.jpg" alt="crochet" />
-              <div class="carousel-caption">
-                <h1>Into This (insert photo here)</h1>
-              </div>
-            </div>
-
-          </div>
-            <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
-        </div>
-
-
-
-<!-- Button trigger modal -->
+<!-- Sign up button linked to modal -->
 <div class="col-xs-12 col-sm-4 col-md-4">
   <h2>Please log in or </h2><button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">Sign Up for Free</button>
 </div>
@@ -45,14 +43,14 @@
         <h4 class="modal-title" id="myModalLabel">Sign up for Stitcherdoodle</h4>
       </div>
       <div class="modal-body">
-              <%= form_for @user do |f| %>
-            <% if @user.errors.any? %>
+        <%= form_for @user do |f| %>
+          <% if @user.errors.any? %>
             <div class = "error_messages">
               <h4>Sorry, the user data is invalid for the following reason(s):</h4>
               <ol>
-            <% for message in @user.errors.full_messages %>
-            <li><%= message %></li>
-            <% end %>
+                <% for message in @user.errors.full_messages %>
+                <li><%= message %></li>
+                <% end %>
               </ol>
               <h4>Please retry below</h4>
             </div>
@@ -77,32 +75,30 @@
             <%= f.label :password_confirmation %>
             <%= f.password_field :password_confirmation %>
           </div>
-
-      </div>
+      </div><!--.modal-body-->
       <div class="modal-footer">
         <%= f.submit "Join Now", class: "btn btn-success" %>
-          <% end %>
+        <% end %>
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <div class="col-xs-12 col-sm-6 col-md-6">
-<%= form_tag sessions_path do %>
-  <div class = "form-group">
-    <%= label_tag :email %></br>
-    <%= text_field_tag :email, params[:email], :class => 'form-control' %>
-  </div>
+  <%= form_tag sessions_path do %>
+    <div class = "form-group">
+      <%= label_tag :email %></br>
+      <%= text_field_tag :email, params[:email], :class => 'form-control' %>
+    </div>
 
-  <div class = "form-group">
-    <%= label_tag :password %></br>
-    <%= password_field_tag :password, :placeholder => "Password",:class => 'form-control' %>
-  </div>
+    <div class = "form-group">
+      <%= label_tag :password %></br>
+      <%= password_field_tag :password, :placeholder => "Password",:class => 'form-control' %>
+    </div>
 
-  <div class = "form-actions">
-    <%= submit_tag "Log in", :class =>'btn btn-lg btn-success' %></br>
-  </div>
-<% end %>
+    <div class = "form-actions">
+      <%= submit_tag "Log in", :class =>'btn btn-lg btn-success' %></br>
+    </div>
+  <% end %>
 </div>
