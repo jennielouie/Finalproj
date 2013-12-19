@@ -24,6 +24,16 @@
   color: initial;
  }
 
+/*Splash page jumbotron */
+.jumbotron, #bs-example-navbar-collapse-1  {
+  background-image: url('cropurp3.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+}
+
+.jumbotron h1, p {
+  color: gold;
+}
 
 /*Carousel*/
 .carousel-inner h1 {

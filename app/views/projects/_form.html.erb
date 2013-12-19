@@ -20,10 +20,11 @@
 
     <div class = radio>
      <h3><%= f.label "Select Preferred Pattern Parser" %></h3>
-      <label><%= f.radio_button :regexCode, '1' %>Row 5: Example instruction  Row 6:</label></br>
-      <label><%= f.radio_button :regexCode, '2' %>Row 5: Example instruction ending with period.  Row 6:</label></br>
-      <label><%= f.radio_button :regexCode, '3' %>Row 5. Example instruction Row 6.</label></br>
-      <label><%= f.radio_button :regexCode, '4' %>5) Example instruction 6)</label></br>
+      <label><%= f.radio_button :regexCode, '1' %>Row 5: Example instruction (no period)<br>  Row 6: Another one</label></br>
+      <label><%= f.radio_button :regexCode, '2' %>Row 5: Example instruction ending with period.  </br>Row 6: one.</label></br>
+      <label><%= f.radio_button :regexCode, '3' %>Row 5. Example instruction (no period)</br>
+        Row 6. Another row</label></br>
+      <label><%= f.radio_button :regexCode, '4' %>5) Example instruction (no period)</br>6) Another one</label></br>
     </div>
 
     <div class = "form-action">
