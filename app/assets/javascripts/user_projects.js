@@ -27,6 +27,12 @@ $(function(){
       // alert("You've reached the last instruction for this project.");
     });
 
+
+// Set "repeatstodo" to "repeatstotal" whenever "repeatstotal" value is changed
+    $('#repeatstotal').change(function(){
+      $('#repeatstodo').val($('#repeatstotal').val());
+    });
+
 // Button to show previous instruction
     $('#prevInst').click(function(){
       if(thisInst > 1) {
