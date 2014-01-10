@@ -117,6 +117,8 @@ $(function(){
     $('#user_project_project_id').val($(this).attr("id"));
   });
 
+  $('#tooltip').tooltip('hiiiii');
+
 // Function to pull current instruction from database, parse it to create new numbered line after each period, comma or semi-colon.
   function changeInstruction(currOrdinal){
     $.ajax( {
