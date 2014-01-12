@@ -20,12 +20,12 @@
 
     <div class = radio>
      <h3><%= f.label "Select Preferred Pattern Parser" %></h3>
-      <label><%= f.radio_button :regexCode, '1' %>Row 5: Example instruction (no period)<br>  Row 6: Another one</label></br>
-      <label><%= f.radio_button :regexCode, '2' %>Row 5: Example instruction ending with period.  </br>Row 6: one.</label></br>
-      <label><%= f.radio_button :regexCode, '3' %>Row 5. Example instruction (no period)</br>
-        Row 6. Another row</label></br>
-      <label><%= f.radio_button :regexCode, '4' %>5) Example instruction (no period)</br>6) Another one</label></br>
-      <label><%= f.radio_button :regexCode, '5' %>{No pattern parsing; saved as single instruction}</label></br>
+      <label><%= f.radio_button :regexCode, '1' %>STYLE 1 (colon only)</br> Row 1: First instruction (no period)</br>  Row 2: Second instruction</label></br>
+      <label><%= f.radio_button :regexCode, '2' %>STYLE 2 (colon & period)</br>Row 1: First instruction, ending with period.  </br>Row 2: Second instruction.</label></br>
+      <label><%= f.radio_button :regexCode, '3' %>STYLE 3 (dot only)</br>Row 1. First instruction (no period)</br>
+        Row 2. Second instruction</label></br>
+      <label><%= f.radio_button :regexCode, '4' %>STYLE 4 (bracket only)</br>1) First instruction (no period)</br>2) Second instruction</label></br>
+      <label><%= f.radio_button :regexCode, '5' %>No pattern parsing; pattern will be saved as single instruction</label></br>
     </div>
 
     <div class = "form-action">
