@@ -1,18 +1,18 @@
 <!-- New User_Project Page -->
 
 <ul class="nav nav-tabs">
-  <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
+  <li><a href="\users\<%=current_user.id%>\user_projects">Return to Your Projects</a></li>
 </ul>
 
 <h1>Add a Project to your Dashboard</h1>
 <div class="col-xs-12 col-sm-8 col-md-8">
   <h4>Select a Project to Add</h4>
   <div class="projlistbox">
-    <ol id="ulprojlist">
+    <ul id="ulprojlist">
       <% @project.each do |p| %>
-        <li id='<%=p.id%>'><%=p.projtitle %>: <%=p.description %></li>
+        <li id='<%=p.id%>'>#<%=p.id%>: <%=p.projtitle %>: <%=p.description %></li>
       <%end %>
-    </ol>
+    </ul>
   </div>
   </br>
   <button class="btn btn-default btn-lg"><%= link_to "Or create a new project", new_project_path %></button>

@@ -2,7 +2,7 @@
 
 <ul class="nav nav-tabs">
   <li class="active"><a href="#">Project Dashboard</a></li>
-  <li><a href="\users\<%=current_user.id%>\user_projects">Return to All Projects</a></li>
+  <li><a href="\users\<%=current_user.id%>\user_projects">Return to <%=current_user.name %>'s Projects</a></li>
 </ul>
 
 <h1>Stitcherdoodle Project: <%= @project.projtitle %></h1>
@@ -38,6 +38,10 @@
          </table>
       </div>
 
-      <!-- Add button that will save this new project to user_project, and redirect to user_projects index -->
+      <div class="col-xs-12 col-sm-4 col-md-4">
+        </br>
+        </br>
+        <button class="btn btn-default btn-lg"><%= link_to "Add this to your Projects", new_user_user_project_path(current_user) %></button>
+      </div>
    </div>
 </div>
