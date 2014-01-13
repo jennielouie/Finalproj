@@ -26,9 +26,10 @@
 
 /*Splash page jumbotron */
 .jumbotron, #bs-example-navbar-collapse-1  {
-  background-image: url('cropurp3.jpg');
+  /*background-image: url('cropurp3.jpg');*/
   background-size: cover;
   background-repeat:no-repeat;
+  background-color: darkslateblue;
 }
 
 .jumbotron h1, p {
@@ -60,6 +61,10 @@
   color:white;
 }
 
+.navbar-header {
+  background-color: darkslateblue;
+}
+
 /*Tables*/
 .dl-horizontal dt {
   white-space: normal;
@@ -86,7 +91,7 @@ li:hover {
   cursor: pointer;
 }
 
-#logouttext {
+#logouttext, #abouttext {
   background: gold;
 }
 /*Anchors*/
@@ -118,6 +123,29 @@ a {
 #savePlace {
   margin-top: 40px;
 }
+
+#aboutbutton {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  height: 100%;
+  font: 'Raleway', sans-serif;
+  font-size: 1em;
+  text-align: center;
+  background-color: gold;
+  color:darkslategrey;
+  border-radius: 0px;
+  border-color: transparent;
+  box-shadow: none
+}
+
+#aboutbutton:hover, #aboutbutton:focus, #aboutbutton:active {
+border-color: transparent;
+}
+
+#aboutbutton.active {
+border-color: transparent;
+}
+
 
 /*Row counter numbers*/
 .rowcounter {

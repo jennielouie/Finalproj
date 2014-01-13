@@ -29,10 +29,30 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
+          <li id='abouttext'><button type='button' class='btn btn-warning' id='aboutbutton' data-toggle="modal" data-target="#aboutModal">About</button></li>
           <li id='logouttext'><%= link_to "Log out", session_path("current"), method: "delete" %></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
+
+<!-- Modal: About Stitcherdoodle->-->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">What is Stitcherdoodle?</h4>
+      </div>
+      <div class="modal-body">
+        Stitcherdoodle transforms crochet/knitting patterns to make them easier to follow.  </br></br>It also helps you manage your projects, and track your progress towards the last stitch.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Get started!</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 
       <% if current_user %>
         Hi <%= current_user.name %>, you are currently logged in.</br>
