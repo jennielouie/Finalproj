@@ -53,8 +53,11 @@
   font-size: 36px ;
 }
 
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
 .navbar-default .navbar-nav>li>a> {
-  color:darkgrey;
+  color:white;
 }
 
 /*Tables*/

@@ -8,6 +8,7 @@ class UserProjectsController < ApplicationController
   def new
     @user_proj = UserProject.new
     @project = Project.all
+    @lastproject = Project.last
     gon.user_proj = @user_proj.attributes
     # respond_to do |format|
     #   format.html

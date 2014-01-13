@@ -9,7 +9,7 @@
   <h4>Select a Project to Add</h4>
   <div class="projlistbox">
     <ul id="ulprojlist">
-      <% @project.each do |p| %>
+      <% @project.reverse.each do |p| %>
         <li id='<%=p.id%>'>#<%=p.id%>: <%=p.projtitle %>: <%=p.description %></li>
       <%end %>
     </ul>
@@ -22,7 +22,7 @@
   <%= form_for([current_user, @user_proj]) do |f|%>
     <div class = "field">
       <%= f.label "Project ID:" %></br>
-      <%= f.text_field :project_id %>
+      <%= f.text_field :project_id, :value =>@lastproject.id %>
     </div>
     </br>
     <%=f.hidden_field :user_id, :value =>current_user.id %>
