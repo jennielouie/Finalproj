@@ -21,8 +21,9 @@
 <div class="col-xs-12 col-sm-4 col-md-4 row-fluid">
   <%= form_for([current_user, @user_proj]) do |f|%>
     <div class = "field">
-      <%= f.label "Project ID:" %></br>
-      <%= f.text_field :project_id, :value =>@lastproject.id %>
+      <%#= f.label "Project ID:" %></br>
+      <%#= f.text_field :project_id, :value =>@lastproject.id %>
+      <%= f.hidden_field :project_id, :value =>@lastproject.id %>
     </div>
     </br>
     <%=f.hidden_field :user_id, :value =>current_user.id %>

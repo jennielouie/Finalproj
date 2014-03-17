@@ -29,19 +29,20 @@
 <!-- Repeated Row Interface -->
 <div class="col-xs-12 col-sm-4 col-md-4 row-fluid">
   <h3 style='text-align:center'>Row Counter</h3>
+  <button class="btn btn-danger btn-lg btn-block" id="resetcounts">Reset Counter</button>
   <label for="repeatstotal"><h4>Total # of Repeated Rows: </h4></label>
   <input type="text" id="repeatstotal" class="rowcounter bigfont" />
 
 
     <div class="col-xs-12 col-sm-6 col-md-6">
       <label for="repeatstodo" style='text-align:center'><h4>Remaining</h4></label>
-      <input type="text" id="repeatstodo" class="rowcounter bigfont" />
+      <input type="text" readonly='readonly'id="repeatstodo" class="rowcounter bigfont" />
       <button class="btn btn-danger btn-lg btn-block bigfont" id="downcount">-</button>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-6">
       <label for="repeatsdone" style='text-align:center'><h4>Done</h4></label>
-      <input type="text" id="repeatsdone" class = 'rowcounter bigfont' />
+      <input type="text" readonly = 'readonly' id="repeatsdone" class = 'rowcounter bigfont' />
       <button class="btn btn-success btn-lg btn-block bigfont" id="upcount">+</button>
     </div>
     <button class= "btn btn-warning btn-lg btn-block" id="savePlace">Save my progress</button></br>

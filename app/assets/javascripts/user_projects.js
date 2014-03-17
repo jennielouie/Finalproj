@@ -1,5 +1,5 @@
 $(function(){
-
+var lastProjectselected;
 // Initialize instruction window with currentInst value saved to the user_project database (defaults to 1 if this is a new user_project).
   changeInstruction(gon.user_proj.currentInst);
   $('#thisInst').text(gon.user_proj.currentInst);
@@ -28,10 +28,18 @@ $(function(){
     });
 
 
-// Set "repeatstodo" to "repeatstotal" whenever "repeatstotal" value is changed
+// Set "repeatstodo" to "repeatstotal" and "repeatsdone" to zero, whenever "repeatstotal" value is changed
     $('#repeatstotal').change(function(){
       $('#repeatstodo').val($('#repeatstotal').val());
+      $('#repeatsdone').val(0);
     });
+
+// Reset counter button
+    $('#resetcounts').click(function(){
+        $('#repeatstotal').val(0);
+        $('#repeatsdone').val(0);
+        $('#repeatstodo').val(0);
+      });
 
 // Button to show previous instruction
     $('#prevInst').click(function(){
@@ -114,7 +122,12 @@ $(function(){
 
 // "Select Project" function to grab project id from li id tag when selected, and input that to the project id text box on the "Create new user project" page
   $('#ulprojlist').on('click', "li", function(event) {
+
+    if (lastProjectselected){
+      $(lastProjectselected).removeClass('selected')};
     $('#user_project_project_id').val($(this).attr("id"));
+    $(this).addClass('selected');
+    lastProjectselected = this;
   });
 
 

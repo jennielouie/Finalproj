@@ -66,13 +66,13 @@ FinalProj::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #Added this for paperclip
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => "wdi-paperclip",
-      :access_key_id => "AKIAIGS4WPWV3S4IPTMQ",
-      :secret_access_key => "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",
-      :s3_host_name => 's3-us-west-1.amazonaws.com'
-    }
-  }
+  # config.paperclip_defaults = {
+  #   :storage => :s3,
+  #   :s3_credentials => {
+  #     :bucket => "wdi-paperclip",
+  #     :access_key_id => "AKIAIGS4WPWV3S4IPTMQ",
+  #     :secret_access_key => "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",
+  #     :s3_host_name => 's3-us-west-1.amazonaws.com'
+  #   }
+  # }
 end

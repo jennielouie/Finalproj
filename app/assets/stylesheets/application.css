@@ -55,7 +55,8 @@
 }
 
 .navbar-default .navbar-brand:hover {
-  color: white;
+  color: gold;
+  cursor:default;
 }
 .navbar-default .navbar-nav>li>a> {
   color:white;
@@ -89,6 +90,10 @@ li:nth-child(odd) {
 li:hover {
   background: skyblue;
   cursor: pointer;
+}
+
+li.selected {
+  background: gold;
 }
 
 #logouttext, #abouttext {
