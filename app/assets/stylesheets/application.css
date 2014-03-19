@@ -115,10 +115,15 @@ a {
   border-color: darkslateblue;
 }
 
-.btn-danger:hover {
+.btn-danger:hover, .btn-success:hover {
   color: #fff;
   background-color: #DAA520;
   border-color: #DAA520;
+}
+
+.btn-delete, .btn-delete:hover {
+  background-color: maroon;
+  color: white;
 }
 
 #upcount, #downcount {
