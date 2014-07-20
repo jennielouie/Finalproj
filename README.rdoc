@@ -1,4 +1,3 @@
 Stitcherdoodle
 
-Ideas:
-Prevent user from adding duplicates of same project.  First attempted to do this through user_project model, validating for unique project id.  However, this prevent multiple users from using the same pattern.
+Stitcherdoodle transforms crochet/knitting patterns to make them easier to follow.  It also helps you manage your projects, and track your progress towards the last stitch.
